@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            background-color: cornflowerblue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        
+        
+        var create=()=>(document.getElementsByClassName("container")[0].innerHTML+=`<div class="box"></div>`);
+            
+        document.addEventListener("DOMContentLoaded", ()=>(console.log("DOM")));
+        
+        function init() {
+            console.log("win");
+        }
+        window.addEventListener("load",init );
+        
+        var body=()=>(console.log("body"));
+    </script>
+</head>
+<body onload="body()">
+    <button onclick="create()">Add box</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>

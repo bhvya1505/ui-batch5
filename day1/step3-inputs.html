@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inputHandler(source, target){
+            document.getElementById(target).value = source.value;
+        }
+        function colorInputHandler(source, target){
+            var targetelm = document.getElementById(target)
+            targetelm.value = source.value;
+            targetelm.style = "background-color:"+source.value;
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sl #</th>
+                <th>Input Type</th>
+                <th>As Rendered In the Browser</th>
+                <th>Assigned Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Text</td>
+                <td><input oninput="inputHandler(this,'textop')" type="text/>"></td>
+                <td><output id="textop"></output></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Search</td>
+                <td><input oninput="inputHandler(this,'searchop')" type="search"></td>
+                <td><output id="searchop"></output></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Color</td>
+                <td><input oninput="colorInputHandler(this,'colorop')" type="color"></td>
+                <td><output style="padding: 10px;" id="colorop"></output></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Time</td>
+                <td><input oninput="inputHandler(this,'timeop')" type="time"></td>
+                <td><output id="timeop"></output></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Date</td>
+                <td><input oninput="inputHandler(this,'dateop')" type="date"></td>
+                <td><output id="dateop"></output></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Date Time</td>
+                <td><input oninput="inputHandler(this,'datetimeop')" type="datetime"></td>
+                <td><output id="datetimeop"></output></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Week</td>
+                <td><input oninput="inputHandler(this,'weekop')" type="week"></td>
+                <td><output id="weekop"></output></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Month</td>
+                <td><input oninput="inputHandler(this,'monthop')" type="month"></td>
+                <td><output id="monthop"></output></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>eMail</td>
+                <td><input oninput="inputHandler(this,'emailop')" type="email"></td>
+                <td><output id="emailop"></output></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>URL</td>
+                <td><input oninput="inputHandler(this,'urlop')" type="url"></td>
+                <td><output id="urlop"></output></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Range</td>
+                <td><input oninput="inputHandler(this,'rangeop')" type="range"></td>
+                <td><output id="rangeop"></output></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Number</td>
+                <td><input oninput="inputHandler(this,'numberop')" type="number"></td>
+                <td><output id="numberop"></output></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

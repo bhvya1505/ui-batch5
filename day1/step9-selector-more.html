@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*   
+        p:not(.box){
+            background-color: tomato;
+        } */
+       /*  
+       ul>li{
+            background-color: tomato;
+        } 
+        */
+        p[title]{
+            width: 200px;
+            background-color: turquoise;
+            margin: 10px;
+            padding: 10px;
+        }
+        p[title = 'Hulk']{
+            width: 200px;
+            background-color: teal;
+            margin: 10px;
+            padding: 10px;
+        }
+        p[title ^= 'B']{
+            width: 200px;
+            background-color: tomato;
+            margin: 10px;
+            padding: 10px;
+        }
+        p[title $= 'man']{
+            width: 200px;
+            background-color: cornflowerblue;
+            margin: 10px;
+            padding: 10px;
+        }
+        p[title *= 'e']{
+            width: 200px;
+            background-color: hotpink;
+            margin: 10px;
+            padding: 10px;
+        }
+        div+p{
+            border: 5px dashed grey;
+        }
+        div~p{
+            border: 5px dashed grey;
+        }
+        body *{
+            border: 2px solid darkmagenta;
+        }
+    </style>
+</head>
+<body>
+   <p title="Ironman" >Ironman</p>
+   <p title="Thor" >Thor</p>
+   <p title="Hulk" >Hulk</p>
+   <p title="Captain America" >Captain America</p>
+   <p title="Hawkeye" >Hawkeye</p>
+   <p title="Black Widow" >Black Widow</p>
+   <p title="Dr Strange" >Dr Strange</p>
+   <p title="Buckey" >Buckey</p>
+   <p title="Black Panther" >Black Panther</p>
+   <p title="Spiderman" >Spiderman</p>
+
+    <div>
+        Divider
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat vel harum facilis quod sunt, voluptates recusandae totam iusto inventore molestiae! Doloribus quos nisi necessitatibus accusantium animi modi laudantium minima.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat vel harum facilis quod sunt, voluptates recusandae totam iusto inventore molestiae! Doloribus quos nisi necessitatibus accusantium animi modi laudantium minima.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat vel harum facilis quod sunt, voluptates recusandae totam iusto inventore molestiae! Doloribus quos nisi necessitatibus accusantium animi modi laudantium minima.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat vel harum facilis quod sunt, voluptates recusandae totam iusto inventore molestiae! Doloribus quos nisi necessitatibus accusantium animi modi laudantium minima.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat vel harum facilis quod sunt, voluptates recusandae totam iusto inventore molestiae! Doloribus quos nisi necessitatibus accusantium animi modi laudantium minima.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat vel harum facilis quod sunt, voluptates recusandae totam iusto inventore molestiae! Doloribus quos nisi necessitatibus accusantium animi modi laudantium minima.
+    </p>
+
+</body>
+</html>
