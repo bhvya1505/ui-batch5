@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /*  var val1 = 5;
+        var val2 = "5";
+
+        console.log(val1 == val2);// true
+        console.log(val1 === val2);// false */
+        var arr = [10,27,18,65,14,73,7,45,1,99,19,69,1,33,54];
+        /* 
+        for(var i = 0; i < arr.length; i++){
+            console.log(arr[i]);
+        }; 
+        */
+        /* 
+        // FOREACH
+        arr.forEach(function(val, idx, arr){
+            console.log(val);
+        }) 
+        */
+        // MAP
+       /*  
+        var doubleArr = arr.map(function(val, idx, arr){
+            return val * 2;
+        });
+        console.log(doubleArr); 
+        */
+        // FILTER
+        /*   
+        var moreThan50 = arr.filter(function(val, idx, arr){
+            return val > 50;
+        });
+        console.log(moreThan50); 
+        */ 
+        // EVERY
+/*         var moreThan50 = arr.every(function(val, idx, arr){
+            console.log(val);
+            return val > 50;
+        });
+        console.log(moreThan50);  */
+        // SOME
+        /* var someMoreThan50 = arr.some(function(val, idx, arr){
+            console.log(val);
+            return val > 50;
+        });
+        console.log(someMoreThan50);  */
+        // REDUCE
+        /* 
+        var total = arr.reduce(function(initval, val, idx, arr){
+            console.log(val);
+            return initval + val;
+        },0);
+        console.log(total);  
+        */ 
+        /*  
+        // REDUCE RIGHT
+        var total1 = arr.reduceRight(function(initval, val, idx, arr){
+            console.log(val);
+            return initval + val;
+        },0);
+        console.log(total1);   
+        */
+        console.log(arr.indexOf(1));
+        console.log(arr.lastIndexOf(1));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

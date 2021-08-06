@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--
+        media queries can be achieved with 
+        HTML, 
+        CSS,
+        JavaScript 
+-->
+<!-- <style media="screen and (min-width: 1000px)">
+    .container{
+        height: 600px;
+        background-color: cornflowerblue;
+        border: 1px solid transparent;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        float: left;
+        margin: 5px;
+    }
+</style>
+<style media="print">
+    .container{
+        height: 600px;
+        border: 1px solid black;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin: 5px;
+        border: 1px solid black;
+    }
+</style> -->
+<!-- <link rel="stylesheet" media="screen" href="styles/screen.css"/>
+<link rel="stylesheet" media="screen and (max-width: 900px)" href="styles/screen-900.css"/> -->
+<style>
+    @media screen{
+        .container{
+        height: 600px;
+        border: 1px solid transparent;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            float: left;
+            margin: 5px;
+        }
+    }
+    @media screen and (max-width : 900px) {
+        .container{
+        height: 600px;
+        border: 1px solid transparent;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            float: left;
+            margin: 5px;
+        }
+        .box10{
+            background-color: darkblue;
+        }
+    }
+    @media screen and (orientation : landscape) {
+        .container{
+            height: 600px;
+            background-color: cornflowerblue;
+            border: 1px solid transparent;
+        }
+    }
+    @media screen and (orientation : portrait) {
+        .container{
+            height: 600px;
+            background-color: navajowhite;
+            border: 1px solid transparent;
+        }
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        setInterval(function(){
+            document.querySelector("#log").textContent = innerWidth;
+        },100);
+    })
+</script>
+</head>
+<body>
+   <h1>Width is : <span id="log"></span></h1>
+
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+        <div class="box box8"></div>
+        <div class="box box9"></div>
+        <div class="box box10"></div>
+    </div>
+    <picture>
+        <source media="(min-width: 1400px)" srcset="images/hulk.jpg" >
+        <source media="(min-width: 1000px)" srcset="images/antman.jpg" >
+        <img src="images/blackwidow.jpg">
+    </picture>
+</body>
+</html>
