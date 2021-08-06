@@ -1,1 +1,105 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
+/*
+class components are smart components
+class components that extend Component
+class components that extend PureComponent
+state 
+
+function components are dumb components
+plain function components
+memo function components
+*/
+
+
+/*
+Mounting 
+    constructor()
+    static getDerivedStateFromProps()
+    render()
+    componentDidMount()
+
+Updating 
+    static getDerivedStateFromProps()
+    shouldComponentUpdate()
+    render()
+    getSnapshotBeforeUpdate()
+    componentDidUpdate()
+
+Unmounting 
+    componentWillUnmount()
+*/
+class FirstComp extends Component{
+    state = {}
+    constructor(){
+        console.log("FirstComp's constructor was called");
+        super();
+    }
+    static getDerivedStateFromProps(){
+        console.log("FirstComp's getDerivedStateFromProps was called");
+        return true
+    }
+    componentDidMount(){
+        console.log("FirstComp's componentDidMount was called");
+    }
+    shouldComponentUpdate(){
+        console.log("FirstComp's shouldComponentUpdate was called");
+        return true 
+    }
+    getSnapshotBeforeUpdate(){
+        console.log("FirstComp's getSnapshotBeforeUpdate was called");
+        return {}
+    }
+    componentDidUpdate(){
+        console.log("FirstComp's componentDidUpdate was called");
+        
+    }
+    componentWillUnmount(){
+        console.log("FirstComp's componentWillUnmount was called");
+        
+    }
+    render(){
+        console.log("FirstComp's render was called");
+        return <div>
+            <h2>First Component</h2>
+            <h3>Power is { this.props.pow }</h3>
+        </div>
+    }
+}
+
+class MainApp extends Component{
+    state = {
+        power : 0
+    }
+    constructor(){
+        super();
+        console.log("MainApp's constructor was called");
+    }
+    static getDerivedStateFromProps(){
+        // return true / {}
+        console.log("MainApp's getDerivedStateFromProps was called");
+        return true
+    }
+    componentDidMount(){
+        console.log("MainApp's componentDidMount was called");
+        
+    }
+    increasePower = ()=>{
+        this.setState({
+            power : this.state.power + 1
+        }, function(){
+            console.log(this.state.power);
+        });
+    }
+    render(){
+        console.log("MainApp's render was called");
+        return <div>
+                    <h1>Welcome to your life</h1>
+                    <button onClick={ this.increasePower }>Increase Power</button>
+                    <FirstComp pow={ this.state.power }/>
+               </div> 
+    }
+}
+
+ReactDOM.render(<MainApp/>, document.getElementById("root"))
